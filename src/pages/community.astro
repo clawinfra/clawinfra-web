@@ -1,0 +1,164 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const links = [
+  {
+    icon: '⬡',
+    name: 'GitHub',
+    description: 'Browse repositories, open issues, and submit pull requests.',
+    href: 'https://github.com/clawinfra',
+    cta: 'Visit GitHub',
+    highlight: true,
+  },
+  {
+    icon: '💼',
+    name: 'LinkedIn',
+    description: 'Follow ClawInfra for project updates and announcements.',
+    href: 'https://www.linkedin.com/company/clawinfra',
+    cta: 'Follow on LinkedIn',
+    highlight: false,
+  },
+  {
+    icon: '🔍',
+    name: 'Block Explorer',
+    description: 'Explore live blocks, transactions, and on-chain activity on the ClawChain testnet.',
+    href: 'http://135.181.157.121:3000',
+    cta: 'Open Explorer',
+    highlight: false,
+  },
+];
+
+const steps = [
+  {
+    number: '01',
+    title: 'Explore open issues',
+    description: 'Browse the GitHub repositories and find issues tagged good first issue or bounty.',
+  },
+  {
+    number: '02',
+    title: 'Fork and branch',
+    description: 'Fork the repo and create a feature branch with a clear, descriptive name.',
+  },
+  {
+    number: '03',
+    title: 'Open a pull request',
+    description: 'All pallets require tests and no unwrap() or panic!() in production code. Follow the PR template.',
+  },
+  {
+    number: '04',
+    title: 'Claim bounties',
+    description: 'Some issues carry on-chain bounties. Claim them by tagging your PR with the issue number.',
+  },
+];
+---
+
+<Layout
+  title="Community"
+  description="Join the ClawInfra open-source community. Contribute to agent-native infrastructure."
+>
+  <!-- Hero -->
+  <section class="pt-32 pb-16 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#4f46e5]/40 bg-[#4f46e5]/10 text-sm text-[#818cf8] mb-6">
+      <span class="w-2 h-2 rounded-full bg-[#4f46e5]"></span>
+      Open Source · MIT License
+    </div>
+    <h1 class="text-4xl sm:text-5xl font-extrabold text-white mb-4">Community</h1>
+    <p class="text-gray-400 max-w-xl mx-auto text-lg leading-relaxed">
+      ClawInfra is built in the open, by contributors who believe the next generation of infrastructure should be owned by no one and available to everyone.
+    </p>
+  </section>
+
+  <!-- Links -->
+  <section class="pb-16 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      {links.map(link => (
+        <a
+          href={link.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          class={`group flex flex-col p-6 rounded-2xl border transition-all duration-300 ${
+            link.highlight
+              ? 'border-[#4f46e5]/50 bg-[#4f46e5]/5 hover:shadow-glow-lg'
+              : 'border-[#2a2a4a] bg-[#1a1a2e]/50 hover:border-[#4f46e5]/40 hover:shadow-glow'
+          }`}
+        >
+          <div class="text-3xl mb-3">{link.icon}</div>
+          <h3 class="font-bold text-white mb-2">{link.name}</h3>
+          <p class="text-sm text-gray-400 leading-relaxed flex-1">{link.description}</p>
+          <div class={`mt-4 text-sm font-medium group-hover:translate-x-1 transition-transform ${
+            link.highlight ? 'text-[#818cf8]' : 'text-[#4f46e5]'
+          }`}>
+            {link.cta} →
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- How to contribute -->
+  <section class="py-16 border-t border-[#2a2a4a]/60 bg-[#1a1a2e]/20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-white mb-3">How to Contribute</h2>
+        <p class="text-gray-400 max-w-md mx-auto">
+          Every pallet, SDK, and CLI tool welcomes contributions. Here's how to get started.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        {steps.map(step => (
+          <div class="flex gap-4 p-6 rounded-2xl border border-[#2a2a4a] bg-[#1a1a2e]/50 hover:border-[#4f46e5]/30 transition-colors">
+            <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br from-[#4f46e5]/20 to-[#7c3aed]/20 border border-[#4f46e5]/30 flex items-center justify-center">
+              <span class="font-mono text-xs font-bold text-[#818cf8]">{step.number}</span>
+            </div>
+            <div>
+              <h3 class="font-semibold text-white mb-1">{step.title}</h3>
+              <p class="text-sm text-gray-400 leading-relaxed">{step.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Code standards -->
+  <section class="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="rounded-2xl border border-[#2a2a4a] bg-[#1a1a2e]/50 p-6 lg:p-8">
+      <h2 class="text-xl font-bold text-white mb-4">Contribution Standards</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div>
+          <h3 class="text-sm font-semibold text-[#818cf8] uppercase tracking-wider mb-3">Required</h3>
+          <ul class="space-y-2">
+            {[
+              'Tests for all new pallet logic',
+              'No unwrap() in production code',
+              'No panic!() in production code',
+              'PR description with context',
+            ].map(item => (
+              <li class="flex items-start gap-2 text-sm text-gray-300">
+                <span class="text-green-400 flex-shrink-0 mt-0.5">✓</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold text-[#818cf8] uppercase tracking-wider mb-3">Preferred</h3>
+          <ul class="space-y-2">
+            {[
+              'Link to related GitHub issue',
+              'Benchmark results for perf changes',
+              'Documentation updates if API changed',
+              'One logical change per PR',
+            ].map(item => (
+              <li class="flex items-start gap-2 text-sm text-gray-300">
+                <span class="text-[#4f46e5] flex-shrink-0 mt-0.5">▸</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

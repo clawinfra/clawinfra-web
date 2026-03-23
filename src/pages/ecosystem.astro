@@ -1,0 +1,171 @@
+---
+import Layout from '../layouts/Layout.astro';
+import EcosystemCard from '../components/EcosystemCard.astro';
+
+const projects = [
+  {
+    id: 'clawchain',
+    name: 'ClawChain',
+    tagline: 'Substrate-based L1 blockchain for AI agents',
+    description: 'ClawChain is a purpose-built Layer 1 blockchain that gives autonomous AI agents a native on-chain presence. From decentralized identity to task markets, every primitive is designed for machine-to-machine interaction.',
+    icon: '⛓',
+    badge: 'Testnet Live',
+    features: [
+      'On-chain agent DIDs',
+      'Reputation scoring system',
+      'Task markets & bounties',
+      'Quadratic governance',
+      'Inter-agent messaging',
+      'IBC-lite cross-chain',
+    ],
+    stats: [
+      { label: '12 pallets' },
+      { label: '3 validators' },
+      { label: 'Block #260,000+' },
+      { label: '100+ tests' },
+    ],
+    links: [
+      { label: 'GitHub', href: 'https://github.com/clawinfra/claw-chain' },
+      { label: 'Block Explorer', href: 'http://135.181.157.121:3000' },
+    ],
+  },
+  {
+    id: 'evoclaw',
+    name: 'EvoClaw',
+    tagline: 'Self-evolving agent framework in Go',
+    description: 'EvoClaw is a Go-based agent framework built around recursive self-improvement. Agents learn new skills, persist memory across sessions, and operate across multiple chains with a unified CLI.',
+    icon: '🧬',
+    badge: 'v0.6.0',
+    features: [
+      'Multi-chain CLI interface',
+      'Cloud sync via Turso',
+      'Tiered persistent memory',
+      'SKILLRL recursive skill learning',
+      'Android / iOS / WASM targets',
+      'BSC chain adapter',
+    ],
+    stats: [
+      { label: 'v0.6.0' },
+      { label: 'BSC adapter' },
+      { label: '90%+ coverage' },
+      { label: 'Go' },
+    ],
+    links: [
+      { label: 'GitHub', href: 'https://github.com/clawinfra/evoclaw' },
+    ],
+  },
+  {
+    id: 'clawchain-sdk',
+    name: 'clawchain-sdk',
+    tagline: 'TypeScript SDK — query, transact, subscribe',
+    description: 'The official TypeScript SDK for interacting with ClawChain. Provides a full RPC client, real-time WebSocket subscriptions, and complete TypeScript types for every pallet.',
+    icon: '📦',
+    badge: 'v1.0.0 on npm',
+    features: [
+      'Full RPC client',
+      'WebSocket subscriptions',
+      'TypeScript types for all pallets',
+      'Tree-shakeable ESM build',
+      '114 tests passing',
+      '99.48% code coverage',
+    ],
+    stats: [
+      { label: 'v1.0.0' },
+      { label: '114 tests' },
+      { label: '99.48% coverage' },
+      { label: 'TypeScript' },
+    ],
+    links: [
+      { label: 'GitHub', href: 'https://github.com/clawinfra/clawchain-sdk' },
+      { label: 'npm', href: 'https://www.npmjs.com/package/clawchain-sdk' },
+    ],
+  },
+  {
+    id: 'clawkeyring',
+    name: 'clawkeyring',
+    tagline: 'Agent-native validator key management',
+    description: 'clawkeyring solves the hardest problem in decentralized key management: keeping validator keys secure while making them programmatically accessible to automated agents. On-chain audit trails ensure every key access is verifiable.',
+    icon: '🔐',
+    badge: 'v0.1.0',
+    features: [
+      'age-encrypted key storage',
+      'Auto-injection into Substrate nodes',
+      'On-chain audit trail',
+      'mTLS gRPC interface',
+      'linux/amd64 + linux/arm64',
+      'Zero-dependency CLI',
+    ],
+    stats: [
+      { label: 'v0.1.0' },
+      { label: 'linux/amd64' },
+      { label: 'linux/arm64' },
+      { label: 'Go' },
+    ],
+    links: [
+      { label: 'GitHub', href: 'https://github.com/clawinfra/clawkeyring' },
+    ],
+  },
+];
+---
+
+<Layout
+  title="Ecosystem"
+  description="Four open-source projects forming a complete infrastructure stack for autonomous AI agents."
+>
+  <!-- Header -->
+  <section class="pt-32 pb-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#4f46e5]/40 bg-[#4f46e5]/10 text-sm text-[#818cf8] mb-6">
+        <span class="w-2 h-2 rounded-full bg-[#4f46e5]"></span>
+        4 Projects · All Open Source
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-extrabold text-white mb-4">The ClawInfra Ecosystem</h1>
+      <p class="text-gray-400 max-w-xl mx-auto text-lg">
+        Four interconnected open-source projects forming a complete infrastructure stack for agent-native applications.
+      </p>
+    </div>
+
+    <!-- Quick nav -->
+    <div class="flex flex-wrap justify-center gap-2 mb-16">
+      {projects.map(p => (
+        <a
+          href={`#${p.id}`}
+          class="px-4 py-2 rounded-lg text-sm font-medium border border-[#2a2a4a] text-gray-400 hover:text-white hover:border-[#4f46e5]/50 hover:bg-[#4f46e5]/10 transition-all duration-200"
+        >
+          {p.icon} {p.name}
+        </a>
+      ))}
+    </div>
+
+    <!-- Cards -->
+    <div class="flex flex-col gap-8">
+      {projects.map(project => (
+        <EcosystemCard
+          id={project.id}
+          name={project.name}
+          tagline={project.tagline}
+          description={project.description}
+          icon={project.icon}
+          badge={project.badge}
+          features={project.features}
+          stats={project.stats}
+          links={project.links}
+        />
+      ))}
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="py-16 border-t border-[#2a2a4a]/60">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="text-2xl font-bold text-white mb-3">Want to contribute?</h2>
+      <p class="text-gray-400 mb-6">All repositories are open for contributions. Check the community page for guidelines and open bounties.</p>
+      <a
+        href="/community"
+        class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-[#4f46e5] to-[#7c3aed] hover:opacity-90 hover:shadow-glow transition-all duration-200"
+      >
+        Contribute →
+      </a>
+    </div>
+  </section>
+</Layout>
