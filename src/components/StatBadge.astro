@@ -10,8 +10,8 @@ const { value, label, highlight = false } = Astro.props;
 
 <div class={`flex flex-col items-center px-5 py-4 rounded-xl border transition-all duration-200 ${
   highlight
-    ? 'border-[#4f46e5]/50 bg-[#4f46e5]/10 shadow-glow'
-    : 'border-[#2a2a4a] bg-[#1a1a2e]/40 hover:border-[#4f46e5]/30'
+    ? 'border-[#00c8c8]/50 bg-[#00c8c8]/10 shadow-glow'
+    : 'border-[#0d2e3a] bg-[#0d1f2d]/40 hover:border-[#00c8c8]/30'
 }`}>
   <span class={`text-2xl font-bold font-mono ${highlight ? 'text-[#818cf8]' : 'text-white'}`}>
     {value}

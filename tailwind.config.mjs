@@ -6,14 +6,14 @@ export default {
       colors: {
         bg: {
           primary: '#0a0a0f',
-          secondary: '#1a1a2e',
+          secondary: '#0d1f2d',
         },
         accent: {
-          blue: '#4f46e5',
-          purple: '#7c3aed',
+          blue: '#00c8c8',
+          purple: '#00a8d4',
         },
         border: {
-          card: '#2a2a4a',
+          card: '#0d2e3a',
         },
       },
       fontFamily: {
@@ -21,11 +21,11 @@ export default {
         mono: ['JetBrains Mono', 'monospace'],
       },
       backgroundImage: {
-        'accent-gradient': 'linear-gradient(135deg, #4f46e5, #7c3aed)',
+        'accent-gradient': 'linear-gradient(135deg, #00c8c8, #00a8d4)',
       },
       boxShadow: {
-        'glow': '0 0 20px rgba(79,70,229,0.3)',
-        'glow-lg': '0 0 40px rgba(79,70,229,0.4)',
+        'glow': '0 0 20px rgba(0,200,200,0.3)',
+        'glow-lg': '0 0 40px rgba(0,200,200,0.4)',
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-out',

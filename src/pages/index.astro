@@ -11,20 +11,20 @@ import StatBadge from '../components/StatBadge.astro';
       <svg class="absolute inset-0 w-full h-full opacity-[0.04]" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
-            <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#4f46e5" stroke-width="1"/>
+            <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#00c8c8" stroke-width="1"/>
           </pattern>
         </defs>
         <rect width="100%" height="100%" fill="url(#grid)"/>
       </svg>
       <!-- Gradient orbs -->
-      <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-[#4f46e5]/10 rounded-full blur-3xl animate-pulse-slow"></div>
-      <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-[#7c3aed]/10 rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 2s;"></div>
+      <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-[#00c8c8]/10 rounded-full blur-3xl animate-pulse-slow"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-[#00a8d4]/10 rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 2s;"></div>
     </div>
 
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-24">
       <!-- Pre-headline badge -->
-      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#4f46e5]/40 bg-[#4f46e5]/10 text-sm text-[#818cf8] mb-8 animate-fade-in">
-        <span class="w-2 h-2 rounded-full bg-[#4f46e5] animate-pulse"></span>
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#00c8c8]/40 bg-[#00c8c8]/10 text-sm text-[#818cf8] mb-8 animate-fade-in">
+        <span class="w-2 h-2 rounded-full bg-[#00c8c8] animate-pulse"></span>
         Testnet Live · Block #260,000+
       </div>
 
@@ -32,7 +32,7 @@ import StatBadge from '../components/StatBadge.astro';
       <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 animate-slide-up">
         <span class="text-white">Infrastructure for the</span>
         <br />
-        <span class="bg-gradient-to-r from-[#4f46e5] to-[#7c3aed] bg-clip-text text-transparent">
+        <span class="bg-gradient-to-r from-[#00c8c8] to-[#00a8d4] bg-clip-text text-transparent">
           Age of Agents
         </span>
       </h1>
@@ -46,7 +46,7 @@ import StatBadge from '../components/StatBadge.astro';
       <div class="flex flex-wrap items-center justify-center gap-4 animate-slide-up" style="animation-delay: 0.2s;">
         <a
           href="/ecosystem"
-          class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-[#4f46e5] to-[#7c3aed] hover:opacity-90 hover:shadow-glow-lg transition-all duration-200"
+          class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-[#00c8c8] to-[#00a8d4] hover:opacity-90 hover:shadow-glow-lg transition-all duration-200"
         >
           Explore Ecosystem
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -57,7 +57,7 @@ import StatBadge from '../components/StatBadge.astro';
           href="https://github.com/clawinfra"
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white border border-[#2a2a4a] hover:border-[#4f46e5]/60 hover:bg-[#4f46e5]/10 hover:shadow-glow transition-all duration-200"
+          class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white border border-[#0d2e3a] hover:border-[#00c8c8]/60 hover:bg-[#00c8c8]/10 hover:shadow-glow transition-all duration-200"
         >
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
             <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
@@ -69,7 +69,7 @@ import StatBadge from '../components/StatBadge.astro';
   </section>
 
   <!-- Stats Bar -->
-  <section class="border-y border-[#2a2a4a]/60 bg-[#1a1a2e]/30 py-8">
+  <section class="border-y border-[#0d2e3a]/60 bg-[#0d1f2d]/30 py-8">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
         <StatBadge value="12" label="Audited Pallets" />
@@ -88,38 +88,38 @@ import StatBadge from '../components/StatBadge.astro';
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
       <!-- ClawChain -->
-      <a href="/ecosystem#clawchain" class="group relative rounded-2xl border border-[#2a2a4a] bg-[#1a1a2e]/50 p-6 hover:border-[#4f46e5]/50 hover:shadow-glow transition-all duration-300">
+      <a href="/ecosystem#clawchain" class="group relative rounded-2xl border border-[#0d2e3a] bg-[#0d1f2d]/50 p-6 hover:border-[#00c8c8]/50 hover:shadow-glow transition-all duration-300">
         <div class="text-3xl mb-3">⛓</div>
         <h3 class="font-bold text-white mb-1">ClawChain</h3>
         <p class="text-xs text-gray-400 leading-relaxed">Substrate-based L1 blockchain purpose-built for AI agents.</p>
-        <div class="mt-4 text-xs text-[#4f46e5] font-medium group-hover:translate-x-1 transition-transform">View details →</div>
+        <div class="mt-4 text-xs text-[#00c8c8] font-medium group-hover:translate-x-1 transition-transform">View details →</div>
       </a>
       <!-- EvoClaw -->
-      <a href="/ecosystem#evoclaw" class="group relative rounded-2xl border border-[#2a2a4a] bg-[#1a1a2e]/50 p-6 hover:border-[#4f46e5]/50 hover:shadow-glow transition-all duration-300">
+      <a href="/ecosystem#evoclaw" class="group relative rounded-2xl border border-[#0d2e3a] bg-[#0d1f2d]/50 p-6 hover:border-[#00c8c8]/50 hover:shadow-glow transition-all duration-300">
         <div class="text-3xl mb-3">🧬</div>
         <h3 class="font-bold text-white mb-1">EvoClaw</h3>
         <p class="text-xs text-gray-400 leading-relaxed">Self-evolving agent framework with recursive skill learning.</p>
-        <div class="mt-4 text-xs text-[#4f46e5] font-medium group-hover:translate-x-1 transition-transform">View details →</div>
+        <div class="mt-4 text-xs text-[#00c8c8] font-medium group-hover:translate-x-1 transition-transform">View details →</div>
       </a>
       <!-- clawchain-sdk -->
-      <a href="/ecosystem#clawchain-sdk" class="group relative rounded-2xl border border-[#2a2a4a] bg-[#1a1a2e]/50 p-6 hover:border-[#4f46e5]/50 hover:shadow-glow transition-all duration-300">
+      <a href="/ecosystem#clawchain-sdk" class="group relative rounded-2xl border border-[#0d2e3a] bg-[#0d1f2d]/50 p-6 hover:border-[#00c8c8]/50 hover:shadow-glow transition-all duration-300">
         <div class="text-3xl mb-3">📦</div>
         <h3 class="font-bold text-white mb-1">clawchain-sdk</h3>
         <p class="text-xs text-gray-400 leading-relaxed">TypeScript SDK for ClawChain with 99.48% test coverage.</p>
-        <div class="mt-4 text-xs text-[#4f46e5] font-medium group-hover:translate-x-1 transition-transform">View details →</div>
+        <div class="mt-4 text-xs text-[#00c8c8] font-medium group-hover:translate-x-1 transition-transform">View details →</div>
       </a>
       <!-- clawkeyring -->
-      <a href="/ecosystem#clawkeyring" class="group relative rounded-2xl border border-[#2a2a4a] bg-[#1a1a2e]/50 p-6 hover:border-[#4f46e5]/50 hover:shadow-glow transition-all duration-300">
+      <a href="/ecosystem#clawkeyring" class="group relative rounded-2xl border border-[#0d2e3a] bg-[#0d1f2d]/50 p-6 hover:border-[#00c8c8]/50 hover:shadow-glow transition-all duration-300">
         <div class="text-3xl mb-3">🔐</div>
         <h3 class="font-bold text-white mb-1">clawkeyring</h3>
         <p class="text-xs text-gray-400 leading-relaxed">Agent-native validator key management with age encryption.</p>
-        <div class="mt-4 text-xs text-[#4f46e5] font-medium group-hover:translate-x-1 transition-transform">View details →</div>
+        <div class="mt-4 text-xs text-[#00c8c8] font-medium group-hover:translate-x-1 transition-transform">View details →</div>
       </a>
     </div>
   </section>
 
   <!-- Why ClawInfra -->
-  <section class="py-24 bg-[#1a1a2e]/20 border-y border-[#2a2a4a]/60">
+  <section class="py-24 bg-[#0d1f2d]/20 border-y border-[#0d2e3a]/60">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-14">
         <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Why ClawInfra?</h2>
@@ -127,19 +127,19 @@ import StatBadge from '../components/StatBadge.astro';
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- Agent-Native -->
-        <div class="rounded-2xl border border-[#2a2a4a] bg-[#1a1a2e]/50 p-6 hover:border-[#4f46e5]/40 hover:shadow-glow transition-all duration-300">
+        <div class="rounded-2xl border border-[#0d2e3a] bg-[#0d1f2d]/50 p-6 hover:border-[#00c8c8]/40 hover:shadow-glow transition-all duration-300">
           <div class="text-3xl mb-4">🤖</div>
           <h3 class="text-lg font-bold text-white mb-2">Agent-Native</h3>
           <p class="text-sm text-gray-400 leading-relaxed">Built from the ground up for autonomous agents, not adapted from human-centric infrastructure.</p>
         </div>
         <!-- Open Source -->
-        <div class="rounded-2xl border border-[#2a2a4a] bg-[#1a1a2e]/50 p-6 hover:border-[#4f46e5]/40 hover:shadow-glow transition-all duration-300">
+        <div class="rounded-2xl border border-[#0d2e3a] bg-[#0d1f2d]/50 p-6 hover:border-[#00c8c8]/40 hover:shadow-glow transition-all duration-300">
           <div class="text-3xl mb-4">🔓</div>
           <h3 class="text-lg font-bold text-white mb-2">Open Source</h3>
           <p class="text-sm text-gray-400 leading-relaxed">Every line of code is public. Fork it, extend it, build on it.</p>
         </div>
         <!-- Production-Ready -->
-        <div class="rounded-2xl border border-[#2a2a4a] bg-[#1a1a2e]/50 p-6 hover:border-[#4f46e5]/40 hover:shadow-glow transition-all duration-300">
+        <div class="rounded-2xl border border-[#0d2e3a] bg-[#0d1f2d]/50 p-6 hover:border-[#00c8c8]/40 hover:shadow-glow transition-all duration-300">
           <div class="text-3xl mb-4">🏭</div>
           <h3 class="text-lg font-bold text-white mb-2">Production-Ready</h3>
           <p class="text-sm text-gray-400 leading-relaxed">12 audited pallets, 90%+ test coverage, testnet live at block #260,000+.</p>
@@ -156,7 +156,7 @@ import StatBadge from '../components/StatBadge.astro';
     </p>
     <a
       href="/community"
-      class="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-white bg-gradient-to-r from-[#4f46e5] to-[#7c3aed] hover:opacity-90 hover:shadow-glow-lg transition-all duration-200"
+      class="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-white bg-gradient-to-r from-[#00c8c8] to-[#00a8d4] hover:opacity-90 hover:shadow-glow-lg transition-all duration-200"
     >
       Get Involved
       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
