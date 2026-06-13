@@ -33,6 +33,6 @@ Pushes to `main` automatically trigger a GitHub Actions workflow that builds and
 ## Pages
 
 - `/` — Home
-- `/ecosystem` — Projects (ClawChain, EvoClaw, clawchain-sdk, clawkeyring)
+- `/ecosystem` — Projects (ClawChain, EvoClaw, clawchain-sdk, clawkeyring, evoclaw-browser, claw-forge)
 - `/roadmap` — Development roadmap
 - `/community` — How to contribute and community links
